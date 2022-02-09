@@ -23,7 +23,7 @@ bool isPrime(int n){
 int main() {
     int startNumber = 0;
     int endNumber = 1000;
-    int numberOfThreads = 1000;
+    int numberOfThreads = 5;
     int currentIndex;
     int blocksize = (endNumber-startNumber) / numberOfThreads;
 
