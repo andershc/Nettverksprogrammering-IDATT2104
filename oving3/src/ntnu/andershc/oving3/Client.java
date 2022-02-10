@@ -9,12 +9,15 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        final int PORTNR = 1250;
+        int PORTNR;
 
         /* Bruker en scanner til å lese fra kommandovinduet */
         Scanner readFromTerminal = new Scanner(System.in);
         System.out.println("Please provide the name of the machine where the server is running: ");
         String server = readFromTerminal.nextLine();
+
+        System.out.println("Please provide a port you want to connect to: ");
+        PORTNR = Integer.parseInt(readFromTerminal.nextLine());
 
         /* Setter opp forbindelsen til serverprogrammet */
         Socket connection = new Socket(server, PORTNR);

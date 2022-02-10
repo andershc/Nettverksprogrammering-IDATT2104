@@ -15,9 +15,7 @@ public class ServerThreads extends Thread {
 
     public void run() {
         try {
-            ServerSocket serverSocket = new ServerSocket(port);
             System.out.println("Log for server. Now we wait...");
-            Socket connection = serverSocket.accept(); // venter til noen tar kontakt
 
         /*
         Åpner strømmer for kommunikasjon med klientprogrammet
