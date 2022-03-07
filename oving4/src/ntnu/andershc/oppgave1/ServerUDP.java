@@ -39,13 +39,23 @@ public class ServerUDP {
                 double firstNumber = Integer.parseInt(tokenizer.nextToken());
                 String operation = tokenizer.nextToken();
                 double secondNumber = Integer.parseInt(tokenizer.nextToken());
+                double answer = 0;
 
-                double answer = switch (operation){
-                    case "+" -> firstNumber + secondNumber;
-                    case "-" -> firstNumber - secondNumber;
-                    case "*" -> firstNumber * secondNumber;
-                    case "/" -> firstNumber / secondNumber;
-                    default -> 0;
+                switch (operation){
+                    case "+" :
+                        answer= firstNumber + secondNumber;
+                        break;
+                    case "-":
+                        answer = firstNumber - secondNumber;
+                        break;
+                    case "*":
+                        answer = firstNumber * secondNumber;
+                        break;
+                    case "/":
+                        answer = firstNumber / secondNumber;
+                        break;
+                    default:
+                        break;
                 };
 
                 System.out.println("Sending " + answer);
